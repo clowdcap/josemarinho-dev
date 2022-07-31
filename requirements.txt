@@ -15,3 +15,18 @@ cd public
 npx create-react-app .
 npm add react-icons --save
 npm add react-router-dom
+
+
+
+https://fonts.google.com
+
+https://react-icons.github.io/react-icons/
+https://pt-br.reactjs.org/docs/getting-started.html
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+https://releases.jquery.com
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+https://pt.stackoverflow.com/users/199230/josé-marinho
+https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction
+https://firebase.google.com/?authuser=0
+https://expressjs.com/en/resources/middleware/cors.html
+https://firebase.google.com/docs/firestore/quickstart#node.js_1
