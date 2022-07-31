@@ -1,53 +1,57 @@
 /* Importando bibliotecas e frameworks */
-var express = require('express')
-var cors = require('cors')
+import express from 'express'
+import cors from 'cors'
+
+/* Instanciando e importando SQlite */
+// import {openDb} from './configDB.js'
+import { 
+    criar_tabela, 
+    atualizar_contato, 
+    deletar_contato, 
+    inserir_contato, 
+    mostrar_contatos, 
+    selecionar_contato }
+from './Controler/newsletter.js'
 
 /* Instanciando Framework App */
-var app = express()
+const app = express()
 
-/* Introduzidno cors e expressando o framework em json */
-app.use(cors())
+/* Introduzindo cors e expressando o framework em json */
 app.use(express.json())
-
-/* Instanciando Nomes */
-const nomesTestes = ['Pessoa 1', 'Pessoa 2', 'Pessoa 3']
+app.use(cors())
 
 /* Pagina Incial */
 app.get('/', (req, res) => {
-    res.send('Olá Mundo!')
+  res.send('Olá Mundo!')
 })
 
-/* Listar nome pelo ID do array nomesTestes */
-app.get('/nomes/:index', (req, res) => {
-  const { index } = req.params
-  return res.json(nomesTestes[index])
+app.get('/newsletter', (req, res) => {
+  try {
+    mostrar_contatos(req.body)
+  res.json({'statusCode': 200})
+  } catch (error) {
+    console.log(error.message)
+  }
 })
 
-/* Listando todos os nomes */
-app.get('/nomes', (req, res) => {
-  return res.json(nomesTestes)
+/* Insere contato */
+app.post('/newsletter', (req, res) => {
+  inserir_contato(req.body)
+  return res.json({"statusCode": 200})
 })
 
-/* Criando um novo nome */
-app.post('/nomes', (req, res) => {
-  const {nome} = req.body
-  nomesTestes.push(nome)
-  return res.json(nomesTestes)
-})
-
-/* Atualizado nomes */
-app.put('/nomes/:index', (req, res) => {
-  const {index} = req.params
-  const {nome} = req.body
-  nomesTestes[index] = nome
-  return res.json(nomesTestes)
-})
-
-/* Deletar nome */
-app.delete('/nomes/:index', (req, res) => {
-  const {index} = req.params
-  nomesTestes.splice(index, 1)
-  return res.json({ message: 'O nome foi deletado' })
+/* atualiza contato */
+app.put('/newsletter', (req, res) => {
+  if(req.body && !req.body.id) {
+    res.json({
+      "statusCode": "400",
+      "msg": "Voce precisa informar o id"
+    })
+  } else {
+    atualizar_contato(req.body)
+    res.json({"statusCode": 200})
+  }
+  
 })
 
 /* Ligando o servidor */
