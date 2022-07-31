@@ -1,0 +1,17 @@
+cd ..
+mkdir server
+mkdir public
+
+cd server
+npm init
+npm add express nodemon cors firebase
+
+// package.json
+"start": "nodemon index.js"
+
+cd ..
+
+cd public 
+npx create-react-app .
+npm add react-icons --save
+npm add react-router-dom
