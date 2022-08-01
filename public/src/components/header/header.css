@@ -1,0 +1,37 @@
+header {
+    width: 100%;
+    border-bottom: 1px solid var(--dark__green);
+    box-shadow: 0px 1px 3px var(--dark__green);
+    padding: 1rem 0;
+}
+
+    header .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+        .logo {
+            flex: 1;
+            text-align: start;
+        }
+            .logo h3 {
+                font-size: var(--font__title);
+                color: var(--dark__green);
+            }
+
+        .menu {
+            flex: 1;
+            text-align: end;
+        }
+
+            .menu .desktop ul {
+                display: inline-flex;
+                text-align: end;
+                gap: 1rem;
+            }   
+
+                .menu li a {
+                    color: var(--dark__green);
+                    font-size: var(--font__text);
+                }

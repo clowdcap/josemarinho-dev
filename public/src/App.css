@@ -1,3 +1,40 @@
+:root {
+    /* Cores */
+    --dark__bg: #444;
+    --color__defalt: #FFF;
+
+    --dark__blue: #285CBD;
+    --dark__green: #ADFF2F;
+
+
+
+    /**/
+
+    --font__text: 1.2rem;
+    --font__title: 1.8rem;
+}
+
 * {
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html, body {
+    background: var(--dark__bg);
+    color: var(--color__defalt);
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2%;
 }
