@@ -18,6 +18,8 @@ npm add react-router-dom
 
 
 
+Referencias // Links de estudo
+
 https://fonts.google.com
 
 https://react-icons.github.io/react-icons/

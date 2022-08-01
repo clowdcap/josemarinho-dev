@@ -1,7 +1,7 @@
 import sqlite3 from "sqlite3"
 import { open } from "sqlite"
 
-const database_name = 'Newsletter.db'
+const database_name = 'newsletter.db'
 
 export async function openDb() {
     return open({

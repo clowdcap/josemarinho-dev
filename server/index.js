@@ -6,12 +6,11 @@ import cors from 'cors'
 // import {openDb} from './configDB.js'
 import { 
     criar_tabela, 
-    atualizar_contato, 
-    deletar_contato, 
     inserir_contato, 
-    mostrar_contatos, 
-    selecionar_contato }
+    mostrar_contatos 
+  }
 from './Controler/newsletter.js'
+
 
 /* Instanciando Framework App */
 const app = express()
@@ -25,30 +24,30 @@ app.get('/', (req, res) => {
   res.send('Olá Mundo!')
 })
 
-app.get('/newsletter', (req, res) => {
+app.get('/api/contato/newsletter', (req, res) => {
   try {
-    mostrar_contatos(req.body)
-  res.json({'statusCode': 200})
+    mostrar_contatos(req, res)
+  res.json()
   } catch (error) {
     console.log(error.message)
   }
 })
 
 /* Insere contato */
-app.post('/newsletter', (req, res) => {
-  inserir_contato(req.body)
+app.post('/api/contato/newsletter', (req, res) => {
+  inserir_contato(req, res)
   return res.json({"statusCode": 200})
 })
 
 /* atualiza contato */
-app.put('/newsletter', (req, res) => {
+app.put('/api/contato/newsletter', (req, res) => {
   if(req.body && !req.body.id) {
     res.json({
-      "statusCode": "400",
+      "statusCode": 400,
       "msg": "Voce precisa informar o id"
     })
   } else {
-    atualizar_contato(req.body)
+    atualizar_contato(req, res)
     res.json({"statusCode": 200})
   }
   
@@ -63,3 +62,4 @@ try {
 } catch (error) {
   console.log(error.message)
 }
+
