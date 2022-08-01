@@ -15,9 +15,30 @@ header {
             flex: 1;
             text-align: start;
         }
+
             .logo h3 {
+                width: fit-content;
+                padding: 0rem 2.5rem;
                 font-size: var(--font__title);
                 color: var(--dark__green);
+                border: 1px solid var(--dark__green);
+                text-transform: uppercase;
+                border-radius: 5px;
+                transition: var(--simple_02s);
+                box-shadow: 1px 1px 5px var(--dark__green);
+            }
+
+            .logo h3:hover {
+                background: var(--dark__green);
+                color: var(--dark__bg);
+                border: 1px solid var(--color__defalt);
+                box-shadow: 1px 1px 5px var(--dark__green);
+            }
+
+            .logo h3:active {
+                color: var(--dark__bg);
+                box-shadow: 3px 3px 5px var(--dark__green);
+                background: rgb(227, 255, 186);
             }
 
         .menu {
@@ -32,6 +53,12 @@ header {
             }   
 
                 .menu li a {
+                    border: 1px solid var(--dark__green);
+                    text-transform: uppercase;
+                    padding: 0.3rem 1rem;
                     color: var(--dark__green);
                     font-size: var(--font__text);
+                    border-radius: 5px;
                 }
+
+                .menu li a {}

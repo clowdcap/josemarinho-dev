@@ -1,23 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 :root {
     /* Cores */
-    --dark__bg: #444;
-    --color__defalt: #FFF;
+    --dark__bg: #044444;
+    --color__defalt: #f2f2f2;
 
     --dark__blue: #285CBD;
     --dark__green: #ADFF2F;
 
 
 
-    /**/
+    /* Fonts */
+    --font__lato: 'Lato', sans-serif;
 
-    --font__text: 1.2rem;
-    --font__title: 1.8rem;
+    --font__text: 1rem;
+    --font__title: 1.5rem;
+
+    /**/
+    --simple_1s: all 1s ease-out;
+    --simple_02s: all 0.2s ease-out;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font__lato);
 }
 
 a {
