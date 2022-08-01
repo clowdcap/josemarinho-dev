@@ -4,7 +4,10 @@ mkdir public
 
 cd server
 npm init
-npm add express nodemon cors firebase
+npm add express nodemon cors
+npm add sqlite3 --save
+npm add sqlite --save
+
 
 // package.json
 "start": "nodemon index.js"
