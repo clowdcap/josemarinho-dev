@@ -3,7 +3,12 @@ import './capa.css'
 
 const Capa = () => {
   return (
-    <div>Capa</div>
+    <section className='capa'>
+      <div className="container">
+        <div className="foto__jm">Foto</div>
+        <div className="apresentacao">Texto</div>
+      </div>
+    </section>
   )
 }
 

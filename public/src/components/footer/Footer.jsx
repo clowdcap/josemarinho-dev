@@ -3,7 +3,13 @@ import './footer.css'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <div className="container">
+        <div className="texto__footer">
+          <p>Todos os diretos reservados</p>
+        </div>
+      </div>
+    </footer>
   )
 }
 

@@ -1,0 +1,12 @@
+footer {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid var(--dark__green);
+    box-shadow: 0px -1px 3px var(--dark__green);
+    padding: 1rem;
+}
+
+    footer .container .texto__footer p {
+        font-size: var(--font__text);
+        color: var(--dark__green);
+    }

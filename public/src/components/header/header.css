@@ -23,7 +23,7 @@ header {
                 color: var(--dark__green);
                 border: 1px solid var(--dark__green);
                 text-transform: uppercase;
-                border-radius: 5px;
+                border-radius: var(--borda_curvada_1);
                 transition: var(--simple_02s);
                 box-shadow: 1px 1px 5px var(--dark__green);
             }
@@ -38,12 +38,14 @@ header {
             .logo h3 a:active {
                 color: var(--dark__bg);
                 box-shadow: 3px 3px 5px var(--dark__green);
-                background: rgb(227, 255, 186);
+                background: var(--dark__green__active);
             }
 
         .menu {
             flex: 1;
             text-align: end;
+            position: relative;
+            width: 100%;
         }
 
             .menu .desktop > ul {
@@ -59,7 +61,7 @@ header {
                     color: var(--dark__green);
                     font-size: var(--font__text);
                     transition: var(--simple_02s);
-                    border-radius: 5px;
+                    border-radius: var(--borda_curvada_1);
                 }
 
                 .menu .desktop li a:hover {
@@ -72,20 +74,78 @@ header {
                 .menu .desktop li a:active {
                     color: var(--dark__bg);
                     box-shadow: 0px 3px 10px var(--dark__green);
-                    background: rgb(227, 255, 186);
+                    background: var(--dark__green__active);
                 }
             
-            .menu .mobile {
-                display: none;
+            .menu .mobile__btn, .mobile__menu{
+                display: none;    
             }
+
 @media screen and (max-width: 820px) {
-    .menu .mobile {
-        display: flex;
-        justify-content: end;
+
+    .menu {
         flex: 1;
+
+    }
+    .menu .mobile__menu {
+        position: absolute;
+        top: 45px;
+        left: -50%;
+        width: 100% !important;
+        /* display: flex; */
+        flex-direction: column;
+        text-align: center;
+        font-size: var(--font__text);
+    
     }
 
-    .menu .m {
+    .menu .mobile__menu ul {
+        background-color: var(--dark__green);
+        border-radius: var(--borda_curvada_1);
+        padding-bottom: 3rem;
+        border: 2px solid var(--dark__green__active);
+    }
+
+    .menu .mobile__menu ul li {
+        padding: 2rem;
+        border-bottom: 3px solid var(--dark__bg);
+        width: 50%;
+        margin: 0 auto;
+        transition: var(--simple_1s);
+        border-radius: var(--borda_curvada_1);
+    }
+    .menu .mobile__menu ul li:hover {
+        border-bottom: 3px solid var(--dark__blue);
+        background: var(--dark__green__active);
+        width: 90%;
+    }
+
+    .menu .mobile__menu ul li a {
+        font-size: var(--font__title);
+        color: var(--dark__bg);
+    }
+
+    .menu .mobile__btn {
+        display: block;
+        font-size: 1.5rem;
+        
+        
+    }
+
+    .menu .mobile__btn i {
+        cursor: pointer;
+        color: var(--dark__green);
+        transition: var(--simple_02s);
+    }
+
+
+    .menu .mobile__btn i:hover {
+        
+        color: var(--dark__green__active);
+    }
+    
+
+    .menu .desktop {
         display: none;
     }
 

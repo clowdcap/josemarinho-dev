@@ -9,7 +9,7 @@
     --dark__blue: #285CBD;
     --dark__green: #ADFF2F;
 
-
+    --dark__green__active: rgb(227, 255, 186);
 
     /* Fonts */
     --font__lato: 'Lato', sans-serif;
@@ -20,6 +20,9 @@
     /**/
     --simple_1s: all 1s ease-out;
     --simple_02s: all 0.2s ease-out;
+
+    /**/
+    --borda_curvada_1: 5px;
 }
 
 * {
