@@ -1,5 +1,6 @@
 import { openDb } from './configDB.js';
 
+
 export async function criar_tabela(){
     openDb().then(db=>{
         db.exec('CREATE TABLE IF NOT EXISTS Newsletter ( id INTEGER PRIMARY KEY, nome TEXT, email TEXT, telefone TEXT)')
@@ -26,3 +27,4 @@ export async function inserir_contato(req, res){
         "statusCode": 200
     })
 }
+

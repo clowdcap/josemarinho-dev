@@ -4,8 +4,12 @@ import { open } from "sqlite"
 const database_name = 'newsletter.db'
 
 export async function openDb() {
+    
     return open({
         filename: `./database/${database_name}`,
         driver: sqlite3.Database
-     })
+    })
+
+     
+    
 }

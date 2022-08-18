@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.get('/api/contato/newsletter', (req, res) => {
   try {
     mostrar_contatos(req, res)
-  res.json()
+  res.json(req, res)
   } catch (error) {
     console.log(error.message)
   }
@@ -58,7 +58,8 @@ const porta = 3000
 try {
   app.listen(porta, function() {
     console.log(`Node Js::: Servidor conectado::: http://localhost:${porta}`)
-  });
+  })
+
 } catch (error) {
   console.log(error.message)
 }
