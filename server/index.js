@@ -54,7 +54,7 @@ app.put('/api/contato/newsletter', (req, res) => {
 })
 
 /* Ligando o servidor */
-const porta = 3000
+const porta = 5000
 try {
   app.listen(porta, function() {
     console.log(`Node Js::: Servidor conectado::: http://localhost:${porta}`)

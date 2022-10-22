@@ -1,0 +1,92 @@
+@import './../../Global.scss';
+
+section.works {
+    border-top: 1px solid var(--dark__green);
+    box-shadow: 0px -1px 3px var(--dark__green);
+    background-color: var(--dark__bg);
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3rem 0;
+
+        @include mobile{
+            height: 100%;
+            padding-top: 3rem;
+        }
+
+        h1 {
+            font-size: var(--font__nome);
+            margin-bottom: 50px;
+
+            @include mobile{
+                margin-bottom: 10px;
+            }
+        }
+        .items {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+   
+
+            .left, .center, .right {
+                flex: 1;
+                text-align: center;
+                align-items: center;
+                margin: 0 1rem;
+                justify-content: center;
+
+                @include mobile{
+                    padding-bottom: 5rem;
+                }
+                
+                h2 {
+                    padding: 1rem;
+                    font-size: var(--font__title);
+                    
+                    @include mobile{
+                        padding: 0;
+                    }
+
+                    span {
+                        color: var(--dark__green);
+                    }
+                }
+
+                h4 {
+                    font-size: var(--font__title);
+                }
+
+                img {
+                    width: 300px;
+                    height: 300px;
+                    object-fit: cover;
+                    margin: 1rem;
+                    border: 2px solid var(--dark__green);
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 10px var(--dark__green);
+                
+                    & img:hover {
+                        transform: scale(1.3);
+                        box-shadow: 5px 5px 10px var(--dark__green);
+                    }
+                }
+
+                p {
+                    font-size: var(--font__text);
+                    
+                    margin-top: 15px;
+                    a {
+                        color: var(--dark__green);
+                    }
+                }
+            }
+        }
+    }
+}

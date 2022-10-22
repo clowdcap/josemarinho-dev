@@ -1,18 +1,15 @@
 import React from "react"
-import './capa.css'
+import './capa.scss'
 import Photo__Jose from './../../assets/me-about.jpg'
 
 const Capa = () => {
 
   return (
-    <section className='capa'>
+    <section className='capa' id="capa">
       <div className="container">
-        <div className="foto__jm">
-          
-          <img src={Photo__Jose} alt="Foto de Perfil - Github" />
-        
-        </div>
+       
         <div className="apresentacao">
+            <img className="img__jm" src={Photo__Jose} alt="Foto de Perfil - Github" />
           <h2>Olá, eu sou </h2>
           <h1>José Marinho</h1>
           <h3>Dev Front-End e Back-End</h3>

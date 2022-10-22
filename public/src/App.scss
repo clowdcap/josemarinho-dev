@@ -1,3 +1,4 @@
+@import './Global.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
@@ -15,7 +16,7 @@
     /* Fonts */
     --font__lato: 'Lato', sans-serif;
 
-    --font__text: 1rem;
+    --font__text: 1.1rem;
     --font__title: 1.5rem;
     --font__capa: 2rem;
     --font__nome: 3rem;
@@ -26,6 +27,13 @@
 
     /**/
     --borda_curvada_1: 5px;
+
+    @include mobile{
+        --font__text: 1.1rem;
+        --font__title: 1.3rem;
+        --font__capa: 1.7rem;
+        --font__nome: 2.5rem;
+    }
 }
 
 * {
@@ -46,6 +54,7 @@ ul {
 html, body {
     background: var(--dark__bg);
     color: var(--color__defalt);
+    overflow-x: hidden;
 }
 
 .container {
