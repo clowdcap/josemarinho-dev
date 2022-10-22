@@ -5,15 +5,20 @@ import './works.scss'
 const Works = () => {
 
   const [data, setData] = useState([]);
+  const [tec, setTec] = useState('JavaScript')
+
   const fetch_api = async () => {
     // fetch('https://api.github.com/users/clowdcap')
     // .then(async data => setData(await data.json()))
     // .catch((e)=>(console.log(e)))
 
+    
+
     const response = await fetch('https://api.github.com/users/clowdcap/repos')
     const response_data = await response.json() 
     if (response_data) {
-      console.log(response_data)
+      //console.log(response_data)
+
       setData(response_data)
     }
   }
@@ -22,38 +27,44 @@ const Works = () => {
     fetch_api()
   }, [])
 
+  const troca_tecnologia = () => {
+    const tecnologia_selecionada = document.querySelector('#tecnologia').value
+    setTec(tecnologia_selecionada)
+  }
+
+
   return (
     <section className="works" id="servicos">
 
       <div className="container">
 
-        <h1>Portifólio</h1>
-        
+        <h1>Portifólio de Projetos</h1>
+
+        <p>Selecione a Tecnologia</p>
         <div className="menu__portifolio">
-          <p>Selecione a Tecnologia</p>
-          <div className="options">
-            <input type="radio" name="HTML" id="HTML"/> HTML
-            <input type="radio" name="Python" id="Python"/> Python
-            <input type="radio" name="JavaScript" id="JavaScript"/> JavaScript
-            <input type="radio" name="CSS" id="CSS"/> CSS
-          </div>
+          <select name="tecnologia" id="tecnologia">
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="HTML">HTML</option>
+          </select>
+          <button type="submit" className="botao" onClick={troca_tecnologia}>Selecionar</button>
         </div>
 
         <ul className="items">
     
           {data.map(item => {
-            const itens = []
-            if (item.language === "HTML") {
+            if (item.language === tec) {
               return (
                 <li className="item">
-                    <h2>Projeto: <span>{item.name}</span></h2>
-                    <h4>Tecnologia: <span>{item.language}</span></h4>
-                    <h3>URL: <a href="{item.svn_url}">Github Respositório</a></h3>
-                    <p>{item.description}</p>
+                  <h2>Projeto: <span>{item.name}</span></h2>
+                  <h4>Tecnologia: <span>{item.language}</span></h4>
+                  <h3>URL: <a href="{item.svn_url}">Github Respositório</a></h3>
+                  <p>{item.description}</p>
                 </li>
               )
             }
           })}
+
         </ul>
       </div>
     </section>    

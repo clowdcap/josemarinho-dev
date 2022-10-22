@@ -1,0 +1,103 @@
+@import './../../Global.scss';
+
+section.newsletter {
+    border-top: 1px solid var(--dark__green);
+    box-shadow: 0px -1px 3px var(--dark__green);
+    background-color: var(--dark__green);
+
+    h2 {
+        font-size: var(--font__nome);
+        color: var(--dark__bg);
+        text-align: center;
+        padding: 3rem 0 0 0;
+
+        @include mobile{
+            padding-bottom: 10px;
+        }
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 3rem 0 5rem 0;
+
+        @include mobile{
+            flex-direction: column;
+        }
+    
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 2;
+            
+            h2 {
+                color: var(--dark__black);
+                font-size: var(--font__capa);
+            }
+
+            p {
+                padding: 10px;
+                text-align: center;
+                color: var(--dark__black);
+                font-size: var(--font__title);
+            }
+        }
+
+        .right {
+            flex: 4;
+            background-color: var(--dark__bg);
+            border-radius: 25px;
+            margin: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 2rem 0;
+                align-items: center;
+                justify-content: center;
+                
+                label {
+                    text-align: center;
+                    color: var(--color__defalt);
+                    font-size: var(--font__title);
+                }
+
+                input, button {
+                    width: 350px;
+                    font-size: var(--font__title);
+                    padding: .8rem .5rem;
+                    border: none;
+                    outline: 3px solid var(--dark__green);
+                    background: transparent;
+                    border-radius: 8px;
+                    color: var(--dark__green);
+                    transition: var(--simple_02s);
+                }
+
+                button {
+                    margin-top: 25px;  
+                    width: 200px;  
+                    
+                }
+                
+                & input:hover, button:hover {
+                    background: var(--color__defalt);
+                    color: var(--dark__bg);
+                }
+                & input:active, button:hover {
+                    background: var(--color__defalt);
+                }
+            }
+        }
+    }
+}
