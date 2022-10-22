@@ -45,7 +45,8 @@ section.works {
                 justify-content: center;
 
                 @include mobile{
-                    padding-bottom: 5rem;
+                    padding: 1.5rem;
+                    width: 100%;
                 }
                 
                 h2 {
