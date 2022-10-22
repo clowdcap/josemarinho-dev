@@ -33,10 +33,12 @@ section.works {
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-   
+            gap: 1rem;
 
-            .left, .center, .right {
-                flex: 1;
+            .item {
+                background-color: red;
+                width: 500px;
+                height: 100%;
                 text-align: center;
                 align-items: center;
                 margin: 0 1rem;

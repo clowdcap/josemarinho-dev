@@ -7,10 +7,16 @@ const Works = () => {
   const [data, setData] = useState([]);
 
   const fetch_api = async () => {
-    const response = await fetch('https://api.github.com/users/clowdcap')
-    .then(await response.json())
-    .catch((e)=>(console.log(e)))
-    setData(response)
+    // fetch('https://api.github.com/users/clowdcap')
+    // .then(async data => setData(await data.json()))
+    // .catch((e)=>(console.log(e)))
+
+    const response = await fetch('https://api.github.com/users/clowdcap/repos')
+    const response_data = await response.json() 
+    if (response_data) {
+      console.log(response_data)
+      setData(response_data)
+    }
   }
 
   useEffect(() => {
@@ -21,15 +27,22 @@ const Works = () => {
     <section className="works" id="servicos">
 
       <div className="container">
+
       <h1>Portifólio</h1>
 
-        <div className="items">
-          <div>
-           {data.map(item => (
-            <li>{item.name}</li>
-           ))}
-          </div>
-        </div>
+        <ul className="items">
+   
+          {data.slice(0, 4).map(item => {
+            return (
+              <li className="item">
+                  <h2>Projeto: <span>{item.name}</span></h2>
+                  <h3>URL: <a href="{item.url}">Github Respositório</a></h3>
+                  <p>{item.description}</p>
+              </li>
+            )
+          })}
+      
+        </ul>
       </div>
     </section>    
   )
