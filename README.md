@@ -1,20 +1,33 @@
+
 # Jose Marinho - Dev
 > ## Portifólio
 
 # AINDA ESTÁ EM PRODUÇÃO
 
-Em resumo, vou integrar
-
-### Back End*
-NodeJS, SQlite3, Express, Cors e Axios/Fetch API
-
-### Front End*
-React Js, React-Icons e React-Routes
-
-* Lista poderá sofrer alteração
+Esse projeto tem como intuito de demonstrar minhas habilidades e conceitos com React Js, frisando apenas o Front-End
+Embora esssa seja de uma aplicação simples, consegui desenvolver um projeto completo, onde o mesmo pode servir como mockup para outros projetos.
 
 Expectativa: 
-Criar sistema de API para que o front por sua rota, me faça requisição a um banco de dados, usando sistema CRUD
+Criar sistema de API usando sistema CRUD.
 
 Motivação:
-Apresentar meus conhecimentos de alguma forma.
+Apresentar meus conhecimentos.
+
+## Tecnologia aplicada
+- **React JS, Sass, Hooks e React-Router**
+- **Node JS, Express, Cors, Axios/Fetch API**
+- **SQLite3**
+* Lista poderá sofrer alteração
+
+# Primeiros comandos
+Abrir um terminal para o front e outro para o back
+> cd api <-- back
+
+> cd public <-- front
+
+### `npm init`
+Para instalar as dependencias necessárias já descritas no package.json
+
+Depois, inicipar o projeto com 
+### `npm start` 
+e abrir o mesmo pelo link: [http://localhost:3000](http://localhost:3000) no seu navegador
