@@ -16,10 +16,14 @@ const Home = () => {
         <Capa />
         <Sobre />
         <Works />
-        <Newsletter />
+        <Newsletter />  
         <Projetos />
     </>
   )
 }
 
 export default Home
+
+/*
+  
+*/

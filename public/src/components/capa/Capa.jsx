@@ -5,7 +5,7 @@ import Photo__Jose from './../../assets/me-about.jpg'
 const Capa = () => {
 
   return (
-    <section className='capa' id="capa">
+    <section className='capa' id="home">
       <div className="container">
        
         <div className="apresentacao">
