@@ -1,0 +1,157 @@
+@import './../../Global.scss';
+
+section.contato {
+    border-top: 1px solid var(--dark__green);
+    box-shadow: 0px -1px 3px var(--dark__green);
+    background-color: var(--dark__green);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            margin-top: 5rem;
+            font-size: var(--font__nome);
+            color: var(--dark__bg);
+        }
+
+        .texto__contato {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem 0;
+
+            h3 {
+                font-size: var(--font__title);
+                color: var(--dark__bg);
+                
+            }
+            
+            p {
+                font-size: var(--font__text);
+                color: var(--dark__bg);
+                
+                @include mobile{
+                    margin: 0 10px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .inputs__contato {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            padding: 0;
+            margin-bottom: 3rem;
+            
+            .left {
+                display: flex;
+                flex-direction: column !important;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                
+                h3 {
+                    font-size: var(--font__title);   
+                    color: var(--dark__bg);
+                }
+                
+                p {
+                    font-size: var(--font__text);
+                    color: var(--dark__bg);
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                   
+                    label {
+                        font-size: var(--font__text);
+                        color: var(--dark__bg);
+                    }
+
+                    input {
+                        width: 300px;
+                        max-width: 300px;
+                        font-size: var(--font__text);
+                        padding: .8rem 1rem;
+                        border: none;
+                        outline: 3px solid var(--dark__bg);
+                        background: transparent;
+                        border-radius: 8px;
+                        color: var(--dark__bg);
+                        transition: var(--simple_02s);
+                    }
+
+                    textarea {
+                        padding: .8rem 1rem;   
+                        width: 300px;
+                        max-width: 300px;
+                        font-size: var(--font__text);
+                        border: none;
+                        outline: 3px solid var(--dark__bg);
+                        background: transparent;
+                        border-radius: 8px;
+                        color: var(--dark__bg);
+                        transition: var(--simple_02s);
+                    }
+
+                    button {
+                        margin-top: 25px;  
+                        width: 200px;  
+                        border: none;
+                        outline: 3px solid var(--dark__bg);
+                        background: var(--dark__bg);
+                        border-radius: 8px;
+                        font-size: var(--font__text);
+                        color: var(--dark__green);
+                        padding: .8rem 1rem;
+                        transition: var(--simple_02s);
+                    }
+                    
+                    & input:hover, button:hover, textarea:hover {
+                        background: var(--dark__green__active);
+                        color: var(--dark__bg);
+                    }
+
+                    & input:active, button:hover, textarea:hover {
+                        background: var(--dark__green__active);
+                    }
+
+                    & button:hover {
+                        box-shadow: 0px 0px 35px var(--dark__green__active);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+    
+            .right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                @include mobile{
+                    display: none;
+                }
+            
+                img {
+                    width: 80%;
+                    text-align: center;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

@@ -109,6 +109,7 @@ section.works {
                 @include mobile{
                     padding: 1.5rem;
                     width: 100%;
+                    
                 }
                 
                 h2 {
@@ -142,6 +143,17 @@ section.works {
             
             & .item:hover {
                 transform: scale(1.1);
+                background-color: var(--dark__green__active);
+                color: var(--dark__black);
+                
+                @include mobile {
+                    border-radius: 0;
+                }
+                
+                span, a, p {
+                    color: var(--dark__bg);
+                    
+                }
             }
         }
     }

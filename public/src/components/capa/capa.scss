@@ -46,12 +46,12 @@
             & .img__jm:hover {
                 transform: scale(1.1);
                 transform: rotate(3px);
-                outline: 1px solid var(--dark__blue);
+                outline: 3px solid var(--dark__green__active);
                 box-shadow: 0px 0px 50px var(--dark__green);
             }
 
             & .img__jm:active {
-                outline: 5px solid var(--dark__blue);
+                box-shadow: 0px 0px 100px var(--dark__green__active);
             }
 
             h2 {
@@ -80,6 +80,7 @@
                 display: grid;
                 width: 100%;
                 grid-template-columns: 1fr 1fr;
+                margin-top: 2rem;
            
 
                 button {

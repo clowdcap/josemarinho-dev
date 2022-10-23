@@ -88,6 +88,7 @@ section.newsletter {
 
                 input, button {
                     width: 350px;
+                    max-width: 350px;
                     font-size: var(--font__title);
                     padding: .8rem 1rem;
                     border: none;
@@ -101,7 +102,7 @@ section.newsletter {
                 button {
                     margin-top: 25px;  
                     width: 200px;  
-                    
+                    transition: var(--simple_02s);
                 }
                 
                 & input:hover, button:hover {

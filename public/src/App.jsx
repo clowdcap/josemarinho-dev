@@ -10,7 +10,7 @@ import Footer from './components/footer/Footer'
 
 // Pages
 import Home from './pages/home/Home'
-import Contato from './pages/contact/Contact'
+import Contato from './components/contact/Contact'
 //import Contact from './pages/contact/Contact'
 
 const App = () => {

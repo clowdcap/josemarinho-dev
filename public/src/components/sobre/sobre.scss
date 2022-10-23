@@ -15,9 +15,10 @@ section.sobre {
         @include mobile{
             height: 100%;
             flex-direction: column-reverse;
-            padding-bottom: 2rem;
+            padding-bottom: 5rem;
             justify-content: center;
             text-align: center;
+            
         }
 
         .left, .right {

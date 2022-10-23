@@ -55,6 +55,7 @@ html, body {
     background: var(--dark__bg);
     color: var(--color__defalt);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -62,3 +63,4 @@ html, body {
     margin: 0 auto;
     padding: 0 2%;
 }
+
