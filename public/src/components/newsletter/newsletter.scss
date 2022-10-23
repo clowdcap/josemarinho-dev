@@ -106,11 +106,11 @@ section.newsletter {
                 }
                 
                 & input:hover, button:hover {
-                    background: var(--color__defalt);
+                    background: var(--dark__green__active);
                     color: var(--dark__bg);
                 }
                 & input:active, button:hover {
-                    background: var(--color__defalt);
+                    background: var(--dark__green__active);
                 }
             }
         }
