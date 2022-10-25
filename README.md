@@ -15,7 +15,7 @@ Apresentar meus conhecimentos.
 
 ## Tecnologia aplicada
 - **React JS, Sass, Hooks e React-Router**
-- **Node JS, Express, Cors, Axios/Fetch API**
+- **Node JS, Express, Fetch API**
 - **SQLite3**
 * Lista poderá sofrer alteração
 
