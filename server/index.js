@@ -22,6 +22,7 @@ app.use(cors())
 /* Pagina Incial */
 app.get('/', (req, res) => {
   res.send('Olá Mundo!')
+  criar_tabela()
 })
 
 app.get('/api/contato/newsletter', (req, res) => {
